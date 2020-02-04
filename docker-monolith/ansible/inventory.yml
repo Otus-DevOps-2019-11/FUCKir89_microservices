@@ -1,0 +1,10 @@
+---
+all:
+  children:
+
+    prod:
+      hosts:
+        appserver:
+          ansible_host: "35.241.152.117"
+        
+
