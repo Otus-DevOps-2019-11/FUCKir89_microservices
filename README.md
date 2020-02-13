@@ -49,3 +49,46 @@
 ```bash
     docker kill $(docker ps -q)
 ```
+Gbgcrf
+## Третья домашка под докеру
+
+#### Что мы сделали:
+   :white_check_mark: Научились компоуз файлы делать
+
+   :white_check_mark: Научились делить по сеткам
+
+   :white_check_mark: Научились парамектризовать с помощью переменных
+
+#### Как запустить сие чудо:
+
+```bash
+      docker-compose up -d
+```
+
+   Имя проекта берется из папки в которой он находится. Если надо это изменить то есть ключик --project-name
+```bash
+      docker-compose --project-name test up -d
+```
+
+   Есть интересный нюанс, что если ключик указан для изменения имени проекта, то надо его указывать всегда:
+```bash
+      docker-compose --project-name test ps
+      docker-compose --project-name test top
+      docker-compose --project-name test logs
+      docker-compose --project-name test down
+      ets.
+```
+
+#### Как проверить:
+
+   Зайти на внешний адрес docker-maschine на порт 9292
+
+#### Как выключить:
+   Без ключа:
+```bash
+      docker-compose down
+```
+   С ключом:
+```bash
+      docker-compose --project-name test down
+```
