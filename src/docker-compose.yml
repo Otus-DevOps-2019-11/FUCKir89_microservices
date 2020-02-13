@@ -1,4 +1,4 @@
-version: "3.3"
+version: '3.3'
 services:
 
   post_db:
@@ -39,4 +39,3 @@ volumes:
 networks:
   back_net:
   front_net:
-    
