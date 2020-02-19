@@ -23,6 +23,7 @@ test_unit_job:
     - mongo:latest
   script:
     - pwd
+    - ls -la | grep simpletest.rb
     - ruby simpletest.rb
   
 test_integration_job:
