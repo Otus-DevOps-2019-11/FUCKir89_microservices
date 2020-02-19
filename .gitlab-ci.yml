@@ -22,6 +22,7 @@ test_unit_job:
   services:
     - mongo:latest
   script:
+    - pwd
     - ruby simpletest.rb
   
 test_integration_job:
