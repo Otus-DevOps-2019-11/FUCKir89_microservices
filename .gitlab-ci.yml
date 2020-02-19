@@ -24,7 +24,7 @@ test_unit_job:
   script:
     - pwd
     - ls -la | grep simpletest.rb
-    - ruby simpletest.rb
+    - sudo ruby simpletest.rb
   
 test_integration_job:
   stage: test
