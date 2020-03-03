@@ -18,7 +18,6 @@ build_job:
   stage: build
   script:
     - echo 'Building...'
-    - docker build -t reddit:$CI_COMMIT_SHORT_SHA .
     
 test_unit_job:
   stage: test
