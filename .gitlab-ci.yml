@@ -6,7 +6,6 @@ variables:
 before_script:
   - cd reddit
   - bundle install 
-  - gem install bundler
 
 stages:
   - build
@@ -18,8 +17,10 @@ stages:
 build_job:
   stage: build
   script:
-    - echo 'Building'
-  
+    - echo 'Building...'
+    - cd reddit/
+    - docker build -t reddit:$CI_COMMIT_SHORT_SHA .
+    
 test_unit_job:
   stage: test
   services:
