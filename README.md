@@ -92,3 +92,37 @@ Gbgcrf
 ```bash
       docker-compose --project-name test down
 ```
+
+## Домашка под prometheus
+
+#### Что мы сделали:
+   :white_check_mark: Подняли контейнер с prometheus
+
+   :white_check_mark: Научились боавлять метрики сбора данных и хосты
+
+   :white_check_mark: Научились настраивать экспортеры
+
+#### Как запустить сие чудо:
+
+```bash
+      cd docker && docker-compose up -d
+```
+#### Как проверить:
+
+   Зайти на внешний адрес docker-maschine на порт 9292 и убедиться, что приложуха работает.
+   Зайти на внешний адрес docker-maschine на порт 9090 и убедиться, что prometheus работает
+
+#### Как выключить:
+   Без ключа:
+```bash
+      cd docker && docker-compose down
+```
+
+Репа на докерхабе: 
+
+  https://hub.docker.com/repository/docker/fuckir89/prometheus
+  https://hub.docker.com/repository/docker/fuckir89/post
+  https://hub.docker.com/repository/docker/fuckir89/comment
+  https://hub.docker.com/repository/docker/fuckir89/ui
+  https://hub.docker.com/repository/docker/fuckir89/mongodb_exporter
+  https://hub.docker.com/repository/docker/fuckir89/blackbox_exporter
