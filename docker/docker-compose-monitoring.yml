@@ -76,7 +76,8 @@ services:
       - back_net
 
   alertmanager:
-    image: ${USER_NAME}/alertmanager
+    build: ../monitoring/alertmanager
+    image: fuckir89/alertmanager:latest
     command:
       - '--config.file=/etc/alertmanager/config.yml'
     ports:
