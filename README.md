@@ -93,7 +93,7 @@ Gbgcrf
       docker-compose --project-name test down
 ```
 
-## Домашка под prometheus
+## Домашка по prometheus
 
 #### Что мы сделали:
    :white_check_mark: Подняли контейнер с prometheus
@@ -126,3 +126,29 @@ Gbgcrf
   https://hub.docker.com/repository/docker/fuckir89/ui
   https://hub.docker.com/repository/docker/fuckir89/mongodb_exporter
   https://hub.docker.com/repository/docker/fuckir89/blackbox_exporter
+
+## Домашка по логированию
+
+#### Что мы сделали:
+   :white_check_mark: Подняли контейнеры с fluentd, kibana, elasticsearch и zipkin
+
+   :white_check_mark: Научились научились собирать и структурировать логи и смотреть трейсы запрососв в приложение
+
+   :white_check_mark: "Искусственно" сломали приложуху и нашли причину ("time.sleep(3)" заставил тормозить http запросики, косяк исправлен, рабочий вариант в репе )
+
+#### Как запустить сие чудо:
+
+```bash
+      cd docker && docker-compose up -d && docker-compose -f docker-compose-logging.yml up -d
+```
+#### Как проверить:
+
+   Зайти на внешний адрес docker-maschine на порт 9292 и убедиться, что приложуха работает.
+   Зайти на внешний адрес docker-maschine на порт 5601 и убедиться, что kibana работает
+   Зайти на внешний фдрес docker-maschine на порт 9411 и убедиться, что Zipkin работает
+
+#### Как выключить:
+  
+```bash
+      cd docker && docker-compose down && docker-compose -f docker-compose-logging.yml down
+```
