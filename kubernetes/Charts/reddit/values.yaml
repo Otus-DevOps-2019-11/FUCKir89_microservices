@@ -1,0 +1,26 @@
+---
+ui:
+  image:
+    repository: fuckir89/ui
+    tag: 3.0
+  service:
+    internalPort: 9292
+    externalPort: 9292
+
+post:
+  image:
+    repository: fuckir89/post
+    tag: 1.0
+  service:
+    externalPort: 5000
+    internalPort: 5000
+
+comment:
+  image:
+    repository: fuckir89/comment
+    tag: logging
+  service:
+    externalPort: 9292
+    internalPort: 9292
+
+
